@@ -11,18 +11,18 @@ class Domain:
     DCAdress = os.getenv('ADIP')
     Domain = os.getenv('ADDomain')
 
-    def get_dn(self):
-        for entry in self.c.response:
-            if entry.get("dn") and entry.get("attributes"):
-                if entry.get("attributes").get("cn"):
-                    USER_DN = entry.get("dn")
-                    return (USER_DN)
-
-    def get_status(self):
-        for entry in self.c.response:
-            if entry.get("attributes"):
-                status = entry.get("attributes").get("userAccountControl")
-                return (status)
+    # def get_dn(self):
+    #     for entry in self.c.response:
+    #         if entry.get("dn") and entry.get("attributes"):
+    #             if entry.get("attributes").get("cn"):
+    #                 USER_DN = entry.get("dn")
+    #                 return (USER_DN)
+    #
+    # def get_status(self):
+    #     for entry in self.c.response:
+    #         if entry.get("attributes"):
+    #             status = entry.get("attributes").get("userAccountControl")
+    #             return (status)
 
     def authenticate(self, user, passwd):
         try:
