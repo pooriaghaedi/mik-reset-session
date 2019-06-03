@@ -1,1 +1,2 @@
-# mik-reset-session
+# Remove Mikrotik Hotspot Session 
+
