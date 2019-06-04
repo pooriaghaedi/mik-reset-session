@@ -5,6 +5,7 @@ Sometimes users forget to logout from their hotspot session, they go to differen
 
 ## Dockerfile
 There are some environment variables in the Dockerfile You need to set, most of them are credentials. after thet you can build the dockerfile using this command.
-
+```
 docker build -t mikresetsession .
 docker run -d -p 80:5000 mikresetsession 
+```
